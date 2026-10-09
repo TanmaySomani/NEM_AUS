@@ -4,6 +4,8 @@ An interactive NSW electricity-market dashboard rebuilt from the NEM_AUS researc
 
 **Coverage:** 1 January 2022–24 July 2024 · NSW1 only · AEST (UTC+10) · AUD/MWh.
 
+**[Open the live Streamlit dashboard](https://nem-observatory.streamlit.app/)** · [Automated checks](https://github.com/TanmaySomani/NEM_AUS/actions/workflows/checks.yml)
+
 ## Run the Streamlit dashboard
 
 Use Python 3.12. The cleaned dataset and fitted-model predictions are included, so viewing the dashboard does not retrain the models or need credentials.

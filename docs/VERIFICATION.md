@@ -17,3 +17,9 @@ Verified locally on 10 October 2026 (Australia/Brisbane).
 - Original material: raw CSVs and academic PDFs are unchanged. All nine notebooks moved to `archive/notebooks/` match their original Git versions byte-for-byte.
 
 CI is configured in `.github/workflows/checks.yml` to build and test React, run all 16 Python tests and execute all four notebooks.
+
+GitHub Actions [run #1](https://github.com/TanmaySomani/NEM_AUS/actions/runs/37949596526) passed on the rebuild commit `8d6f4fa` in 1 minute 24 seconds, including notebook execution on Linux.
+
+The dashboard is published at [nem-observatory.streamlit.app](https://nem-observatory.streamlit.app/), deploying `main` / `streamlit_app.py` with Python 3.12. Cloud logs confirm dependency installation and startup. The hosted overview renders the same 1,423 default half-hours and $111.78/MWh mean as the local app.
+
+All four hosted views were checked, including switching to centered Gaussian smoothing and inspecting the forecasting leaderboard and data audit. The hosted CSV download contains 1,423 rows and 13 columns, with explicit AEST timestamps from `2024-06-25T00:00` through `2024-07-24T15:00`.

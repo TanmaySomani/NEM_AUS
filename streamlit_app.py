@@ -197,7 +197,7 @@ elif view == 'Volatility lab':
     show_events(selected,threshold)
 
 elif view == 'Forecasting':
-    st.info(f'The last-interval baseline wins on the full test period: MAE {money(benchmark["models"][1]["mae"])}/MWh versus {money(benchmark["models"][0]["mae"])} for gradient boosting. These are rolling one-step backtests, not multi-step future forecasts.')
+    st.info(f'The last-interval baseline wins on the full test period: MAE {benchmark["models"][1]["mae"]:.2f} AUD/MWh versus {benchmark["models"][0]["mae"]:.2f} for gradient boosting. These are rolling one-step backtests, not multi-step future forecasts.')
     tested=selected.dropna(subset=['prediction'])
     if tested.empty:
         st.warning('This selection falls outside the test period. Predictions begin on 1 January 2024.')
