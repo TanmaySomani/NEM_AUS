@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+artifacts/
+.vite/
+*.tsbuildinfo
+.ipynb_checkpoints/
+.jupyter-runtime/
+.streamlit/secrets.toml

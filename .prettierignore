@@ -1,0 +1,8 @@
+node_modules
+dist
+.venv
+artifacts
+public/data/market.json
+*.csv
+*.ipynb
+*.pdf

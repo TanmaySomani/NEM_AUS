@@ -1,0 +1,158 @@
+{
+  "train": {
+    "start": "2022-01-08 00:30:00",
+    "end": "2023-06-30 23:30:00",
+    "count": 25819
+  },
+  "validation": {
+    "start": "2023-07-01 00:00:00",
+    "end": "2023-12-31 23:30:00",
+    "count": 8782
+  },
+  "test": {
+    "start": "2024-01-01 00:00:00",
+    "end": "2024-07-24 15:00:00",
+    "count": 9871
+  },
+  "horizonMinutes": 30,
+  "chosenLoss": "absolute_error",
+  "candidates": {
+    "absolute_error": {
+      "mae": 18.809,
+      "rmse": 110.395,
+      "bias": -2.689
+    },
+    "squared_error": {
+      "mae": 24.082,
+      "rmse": 116.202,
+      "bias": 5.881
+    }
+  },
+  "models": [
+    {
+      "name": "Gradient boosting",
+      "mae": 45.032,
+      "rmse": 550.877,
+      "bias": -28.725
+    },
+    {
+      "name": "Last interval",
+      "mae": 41.643,
+      "rmse": 385.487,
+      "bias": 0.002
+    },
+    {
+      "name": "Previous day",
+      "mae": 87.49,
+      "rmse": 718.379,
+      "bias": -0.245
+    },
+    {
+      "name": "Previous week",
+      "mae": 105.441,
+      "rmse": 793.464,
+      "bias": -1.515
+    }
+  ],
+  "importance": [
+    {
+      "feature": "price_lag_1",
+      "importance": 38.874
+    },
+    {
+      "feature": "hour_sin",
+      "importance": 3.513
+    },
+    {
+      "feature": "solar_lag_1",
+      "importance": 2.476
+    },
+    {
+      "feature": "price_lag_2",
+      "importance": 1.996
+    },
+    {
+      "feature": "price_lag_48",
+      "importance": 1.843
+    },
+    {
+      "feature": "hour_cos",
+      "importance": 1.774
+    },
+    {
+      "feature": "price_lag_336",
+      "importance": 1.711
+    },
+    {
+      "feature": "temperature_lag_1",
+      "importance": 1.663
+    },
+    {
+      "feature": "demand_lag_1",
+      "importance": 1.651
+    },
+    {
+      "feature": "price_mean_48",
+      "importance": 1.563
+    },
+    {
+      "feature": "weekday_sin",
+      "importance": 1.556
+    },
+    {
+      "feature": "month_cos",
+      "importance": 1.526
+    },
+    {
+      "feature": "weekday_cos",
+      "importance": 1.521
+    },
+    {
+      "feature": "price_mean_6",
+      "importance": 1.518
+    },
+    {
+      "feature": "month_sin",
+      "importance": 1.513
+    }
+  ],
+  "bandWidth": 22.118,
+  "bandTestCoverage": 76.56,
+  "classifier": {
+    "threshold": 300,
+    "probabilityCutoff": 0.5416,
+    "precision": 0.5551948051948052,
+    "recall": 0.7402597402597403,
+    "f1": 0.634508348794063,
+    "averagePrecision": 0.7018216433785595,
+    "prevalence": 0.023401884307567622,
+    "confusion": [
+      [
+        9503,
+        137
+      ],
+      [
+        60,
+        171
+      ]
+    ]
+  },
+  "features": [
+    "price_lag_1",
+    "price_lag_2",
+    "price_lag_48",
+    "price_lag_336",
+    "price_mean_6",
+    "price_mean_48",
+    "demand_lag_1",
+    "solar_lag_1",
+    "temperature_lag_1",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "month_sin",
+    "month_cos"
+  ],
+  "seed": 42
+}
